@@ -1,0 +1,34 @@
+{
+  "translation": {    
+    "home": {
+      "header": {
+        "hello": "Hallo",
+        "logout": "Abmelden",
+        "documentation": "Dokumentation"
+      },
+      "language": {
+        "german": "Deutsch",
+        "english": "Englisch"
+      }
+    },
+    "welcome": {
+      "youADUser": "Sie können sich mit Ihrem AD-Benutzer anmelden",
+      "welcomeToPX": "Version Tracker",
+      "pleaseSignIn": "Bitte melden Sie sich an",
+      "login": "Anmelden mit Microsoft"
+    },
+    "dashboard": {
+      "welcomeToDashboard": "Willkommen im Dashboard",
+      "categories": "Kategorie",
+      "search": "Suche",
+      "header": {
+        "projects": "Projekte"
+      }
+    },
+    "permissionDenied": {
+      "headline": "Zugriff verweigert",
+      "text": "Leider haben Sie keine Berechtigung, sich in der Version Tracker App einzuloggen.\nWenn Sie Zugriff benötigen, wenden Sie sich bitte an die Administratoren unter peng-helpdesk@vnr.de.",
+      "footer": "Mit freundlichen Grüßen, Team PENG"
+    }
+  }
+}

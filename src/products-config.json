@@ -1,0 +1,14 @@
+{
+    "php": {        
+        "threshold_to_outdate_in_months": [6, 9]
+    },
+    "nodejs": {
+        "threshold_to_outdate_in_months": [6, 9]
+    },
+    "wordpress": {
+        "threshold_to_outdate_in_months": [6, 9]
+    },
+    "laravel": {
+        "threshold_to_outdate_in_months": [6, 9]
+    }
+}

@@ -1,0 +1,344 @@
+{
+  "categories": {
+    "body": [
+      "module",
+      "wordpress"
+    ]
+  },
+  "projects": [
+    {
+      "category": "module",
+      "body": [
+        "testdomain.com",
+        "domain.de"
+      ]
+    },
+    {
+      "category": "wordpress",
+      "body": [
+        "cloud-360.de",
+        "example.de",
+        "test.com",
+        "test1.com",
+        "test2.com",
+        "test3.com",
+        "test4.com",
+        "test5.com",
+        "test6.com",
+        "test7.com",
+        "test8.com",
+        "test9.com"
+      ]
+    }
+  ],
+  "projectsInformation": [
+    {
+      "id": 1,
+      "domain": "domain.de",
+      "body": {
+        "category": "wordpress",
+        "domain": "domain.de",
+        "products": [
+          {
+            "name": "php",
+            "version": "7.4"
+          },
+          {
+            "name": "nodejs",
+            "version": "10"
+          },
+          {
+            "name": "wordpress",
+            "version": "5.7"
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "domain": "testdomain.com",
+      "body": {
+        "category": "php",
+        "domain": "testdomain.com",
+        "products": [
+          {
+            "name": "php",
+            "version": "7.4"
+          },
+          {
+            "name": "nodejs",
+            "version": "10"
+          },
+          {
+            "name": "wordpress",
+            "version": "5.7"
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "domain": "cloud-360.de",
+      "body": {
+        "category": "node",
+        "domain": "cloud-360.de",
+        "products": [
+          {
+            "name": "php",
+            "version": "7.4"
+          },
+          {
+            "name": "nodejs",
+            "version": "10"
+          },
+          {
+            "name": "wordpress",
+            "version": "5.7"
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "domain": "example.de",
+      "body": {
+        "category": "node",
+        "domain": "example.de",
+        "products": [
+          {
+            "name": "php",
+            "version": "7.4"
+          },
+          {
+            "name": "nodejs",
+            "version": "10"
+          },
+          {
+            "name": "wordpress",
+            "version": "5.7"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "domain": "test.com",
+      "body": {
+        "category": "node",
+        "domain": "test.com",
+        "products": [
+          {
+            "name": "php",
+            "version": "7.4"
+          },
+          {
+            "name": "nodejs",
+            "version": "10"
+          },
+          {
+            "name": "wordpress",
+            "version": "5.7"
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "domain": "test1.com",
+      "body": {
+        "category": "node",
+        "domain": "test1.com",
+        "products": [
+          {
+            "name": "php",
+            "version": "7.4"
+          },
+          {
+            "name": "nodejs",
+            "version": "10"
+          },
+          {
+            "name": "wordpress",
+            "version": "5.7"
+          }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "domain": "test2.com",
+      "body": {
+        "category": "node",
+        "domain": "test2.com",
+        "products": [
+          {
+            "name": "php",
+            "version": "7.4"
+          },
+          {
+            "name": "nodejs",
+            "version": "10"
+          },
+          {
+            "name": "wordpress",
+            "version": "5.7"
+          }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "domain": "test3.com",
+      "body": {
+        "category": "node",
+        "domain": "test3.com",
+        "products": [
+          {
+            "name": "php",
+            "version": "7.4"
+          },
+          {
+            "name": "nodejs",
+            "version": "10"
+          },
+          {
+            "name": "wordpress",
+            "version": "5.7"
+          }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "domain": "test4.com",
+      "body": {
+        "category": "node",
+        "domain": "test4.com",
+        "products": [
+          {
+            "name": "php",
+            "version": "7.4"
+          },
+          {
+            "name": "nodejs",
+            "version": "10"
+          },
+          {
+            "name": "wordpress",
+            "version": "5.7"
+          }
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "domain": "test5.com",
+      "body": {
+        "category": "node",
+        "domain": "test5.com",
+        "products": [
+          {
+            "name": "php",
+            "version": "7.4"
+          },
+          {
+            "name": "nodejs",
+            "version": "10"
+          },
+          {
+            "name": "wordpress",
+            "version": "5.7"
+          }
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "domain": "test6.com",
+      "body": {
+        "category": "node",
+        "domain": "test6.com",
+        "products": [
+          {
+            "name": "php",
+            "version": "7.4"
+          },
+          {
+            "name": "nodejs",
+            "version": "10"
+          },
+          {
+            "name": "wordpress",
+            "version": "5.7"
+          }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "domain": "test7.com",
+      "body": {
+        "category": "node",
+        "domain": "test7.com",
+        "products": [
+          {
+            "name": "php",
+            "version": "7.4"
+          },
+          {
+            "name": "nodejs",
+            "version": "10"
+          },
+          {
+            "name": "wordpress",
+            "version": "5.7"
+          }
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "domain": "test8.com",
+      "body": {
+        "category": "node",
+        "domain": "test8.com",
+        "products": [
+          {
+            "name": "php",
+            "version": "7.4"
+          },
+          {
+            "name": "nodejs",
+            "version": "10"
+          },
+          {
+            "name": "wordpress",
+            "version": "5.7"
+          }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "domain": "test9.com",
+      "body": {
+        "category": "node",
+        "domain": "test9.com",
+        "products": [
+          {
+            "name": "php",
+            "version": "7.4"
+          },
+          {
+            "name": "nodejs",
+            "version": "10"
+          },
+          {
+            "name": "wordpress",
+            "version": "5.7"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.db103d8e.css",
+    "main.js": "/static/js/main.a21c7a08.js",
+    "static/js/787.48dc12a2.chunk.js": "/static/js/787.48dc12a2.chunk.js",
+    "static/media/background_PX-hell.png": "/static/media/background_PX-hell.70e157c6194fbb92d747.png",
+    "static/media/Logo_pl-x_1652x385.png": "/static/media/Logo_pl-x_1652x385.0edb7a852ef03221c559.png",
+    "static/media/MSFT.svg": "/static/media/MSFT.1ffe94e0fad69abbd44be0c908b9d94c.svg",
+    "index.html": "/index.html",
+    "main.db103d8e.css.map": "/static/css/main.db103d8e.css.map",
+    "main.a21c7a08.js.map": "/static/js/main.a21c7a08.js.map",
+    "787.48dc12a2.chunk.js.map": "/static/js/787.48dc12a2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db103d8e.css",
+    "static/js/main.a21c7a08.js"
+  ]
+}

@@ -1,0 +1,272 @@
+openapi: 3.0.3
+info:
+  title: PX-App Status API Documentation
+  description: This is the API-Documentation of PX-App Status
+  version: 1.0.0
+servers:
+  - url: https://api.preprod.status.pl-x.de/v1
+  - url: https://api.status.pl-x.de/v1
+tags:
+  - name: categories
+    description: All projects' categories
+  - name: projects
+    description: add new projects
+  - name: status
+    description: api status
+paths:
+  /categories:
+    get:
+      tags:
+        - categories
+      summary: List all project categories
+      description: List all project categories
+      operationId: getCategories
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/categoriesResponse'         
+        '403':
+          description: Missing authentication token
+      security:
+        - api_key: []
+  /categories/{category}/projects:
+    get:
+      tags:
+        - categories
+      parameters:
+        - in: path
+          name: category   # Note the name is the same as in the path
+          required: true
+          schema:
+            type: string
+            minimum: 3
+          description: Category
+      summary: List all category's prjects
+      description: List all category's prjects
+      operationId: getProjectOfCategory
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/categoryProjectsResponse' 
+        '403':
+          description: Missing authentication token
+      security:
+        - api_key: []
+  /categories/{category}/projects/{project}:
+    get:
+      tags:
+        - categories
+      parameters:
+        - in: path
+          name: category   # Note the name is the same as in the path
+          required: true
+          schema:
+            type: string
+            minimum: 3
+          description: Category
+        - in: path
+          name: project   # Note the name is the same as in the path
+          required: true
+          schema:
+            type: string
+            minimum: 3
+          description: Project
+      summary: Get project information
+      description: Get information of one project out of one category
+      operationId: getProjectInformationOfCategory
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/categoryProjectInformationResponse' 
+        '403':
+          description: Missing authentication token
+        '404':
+          description: File not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/fileNotFound' 
+      security:
+        - api_key: []
+  /projects:
+    post:
+      tags: 
+       - projects
+      summary: Add new project
+      description: Add a new project to category
+      operationId: addProject
+      requestBody:
+        required: true
+
+        description: Add a new project to category
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/addNewProjectRequestBody'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/addNewProjectResponse' 
+      security:
+        - api_key: []
+  /status:
+    get:
+      tags:
+        - status
+      summary: Get status of API
+      description: Get status of API
+      operationId: getStatus
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                 properties:
+                  statusCode: 
+                    type: integer
+                    example: 202        
+        '403':
+          description: Missing authentication token
+      security:
+        - api_key: []
+components:
+  schemas:
+    categoriesResponse: 
+      type: object
+      properties:
+        statusCode: 
+          type: integer
+          example: 200
+        body:
+          type: string
+          example: [
+            "module",
+            "wordpress"
+            ]
+    categoryProjectsResponse: 
+      type: object
+      properties:
+        statusCode: 
+          type: integer
+          example: 200
+        body:
+          type: string
+          example: [
+            "cloud-360.de",
+            "example.de",
+            "test.com",
+            "testdomain.com"
+            ]
+    categoryProjectInformationResponse: 
+      type: object
+      properties:
+        statusCode: 
+          type: integer
+          example: 200
+        body:
+          type: object
+          properties:
+            category:
+              type: string
+              example: wordpress
+            domain:
+              type: string
+              example: domain.de
+            products:
+              type: string
+              example: [
+                {
+                    "name": "php",
+                    "version": "7.4"
+                },
+                {
+                    "name": "nodejs",
+                    "version": "10"
+                },
+                {
+                    "name": "wordpress",
+                    "version": "5.7"
+                }
+                ]
+    fileNotFound:
+      type: object
+      properties:
+        statusCode: 
+          type: integer
+          example: 404
+        error: 
+          type: string
+          example: {
+            "message": "File not found"
+            }
+    addNewProjectRequestBody:
+      type: object
+      properties:
+        category:
+          type: string
+          example: wordpress
+        domain:
+          type: string
+          minLength: 3
+          maxLength: 100
+          example: domain.de
+        products:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              version:
+                type: string
+          example: [
+              {
+                  "name": "php",
+                  "version": "7.4"
+              },
+              {
+                  "name": "nodejs",
+                  "version": "10"
+              },
+              {
+                  "name": "wordpress",
+                  "version": "5.7"
+              }
+              ]
+    addNewProjectResponse:
+      type: object
+      properties:
+        statusCode: 
+          type: integer
+          example: 200
+        body:
+          type: object
+          example:
+            {
+                "ETag": "\"b4032b47ddd4dfa42d3c2f4c1e99ccff\"",
+                "ServerSideEncryption": "AES256",
+                "VersionId": "B1.NXhZ5dgZpDesjVeaM6N_ktuUDUE0W"
+          }
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+    CognitoAuthorizer:
+      type: apiKey
+      name: Authorization
+      in: header
+      x-amazon-apigateway-authtype: cognito_user_pools
